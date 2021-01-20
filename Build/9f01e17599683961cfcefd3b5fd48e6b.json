@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "VeViDi web project",
+"productVersion": "10.1",
+"dataUrl": "0e44f28f89a84a67416e7e88573f4ea9.unityweb",
+"wasmCodeUrl": "387f6daf44141ed7ccccdbfd78f93c49.unityweb",
+"wasmFrameworkUrl": "6614388931c4c0402689315d0219df54.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.16f1"
+}
