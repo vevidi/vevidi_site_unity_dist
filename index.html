@@ -30,7 +30,7 @@
       const buildUrl = "Build";
       const loaderUrl = buildUrl + "/c3ee295078e7da92062675f4f662823b.js";
       const config = {
-        dataUrl: buildUrl + "/ee1ef0d45206bc01403037cb29ca5b39.data.unityweb",
+        dataUrl: buildUrl + "/a832e1edd60007b85cb5ba8833f9abb6.data.unityweb",
         frameworkUrl: buildUrl + "/ee8bf9944d956f9c8ad695b46c0d2c67.js.unityweb",
         codeUrl: buildUrl + "/400d3b3179aaa262d785c7528b6a83d1.wasm.unityweb",
         symbolsUrl: buildUrl + "/891dc25340047e32560ca2f5714bb943.json.unityweb",
@@ -39,7 +39,7 @@
         productName: "VeViDi web project",
         productVersion: "10.1",
       };
-
+      var scene_hash = window.location.hash;
       const container = document.querySelector("#unity-container");
       const canvas = document.querySelector("#unity-canvas");
       const loadingCover = document.querySelector("#loading-cover");
@@ -47,7 +47,7 @@
       const progressBarFull = document.querySelector("#unity-progress-bar-full");
       const fullscreenButton = document.querySelector("#unity-fullscreen-button");
       const spinner = document.querySelector('.spinner');
-
+     
       const canFullscreen = (function() {
         for (const key of [
             'exitFullscreen',
@@ -71,23 +71,17 @@
 
       const script = document.createElement("script");
       script.src = loaderUrl;
-      script.onload = () => {
+      script.onload = () => {   
+           
         createUnityInstance(canvas, config, (progress) => {
           spinner.style.display = "none";
           progressBarEmpty.style.display = "";
           progressBarFull.style.width = `${100 * progress}%`;
         }).then((unityInstance) => {
-          loadingCover.style.display = "none";
-          if (canFullscreen) {
-            if (!hideFullScreenButton) {
-              fullscreenButton.style.display = "";
+          const UrlChanger = (function() {
+            if (scene_hash == ""){
+              scene_hash = window.location.hash;
             }
-            fullscreenButton.onclick = () => {
-              unityInstance.SetFullscreen(1);
-            };
-          }
-          window.onpopstate = function(event) {
-            var scene_hash = window.location.hash;
             switch(scene_hash){
               case "#main_page":
                 unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 0);
@@ -122,12 +116,28 @@
               default:
                 break;   
             };
-          };
+          });
+          UrlChanger();
+          loadingCover.style.display = "none";
+          if (canFullscreen) {
+            if (!hideFullScreenButton) {
+              fullscreenButton.style.display = "";
+            }
+            fullscreenButton.onclick = () => {
+              unityInstance.SetFullscreen(1);
+            };
+          }          
+          window.onpopstate = function(event) {
+            scene_hash = window.location.hash;
+            UrlChanger();
+          }
         }).catch((message) => {
           alert(message);
         });
       };
       document.body.appendChild(script);
+
+
     </script>
   </body>
 </html>
