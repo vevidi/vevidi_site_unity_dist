@@ -7,13 +7,7 @@
     <title>VeViDi web project</title>
     <!-- <link rel="shortcut icon" href="TemplateData/favicon.ico"> -->
     <link rel="stylesheet" href="TemplateData/style.css">
-
-
-    <script>
-        page_hash = window.location.hash; 
-        window.location.hash = page_hash;  
-    </script>
-
+ 
     <!-- window.location.hash -->
 
   </head>
@@ -36,10 +30,10 @@
       const buildUrl = "Build";
       const loaderUrl = buildUrl + "/c3ee295078e7da92062675f4f662823b.js";
       const config = {
-        dataUrl: buildUrl + "/a64fe20543dbf81aa569987ba606b260.data.unityweb",
-        frameworkUrl: buildUrl + "/755c7cb47d749b9a26e1156bcf25874e.js.unityweb",
-        codeUrl: buildUrl + "/a9c0bba5c1ee076f6ed5b9d3c60b2597.wasm.unityweb",
-        symbolsUrl: buildUrl + "/45751d10c42e2bdc06e85d45af1c3de2.json.unityweb",
+        dataUrl: buildUrl + "/4109d74cda062c10961bac48ee28953c.data.unityweb",
+        frameworkUrl: buildUrl + "/59c8448d9e11687de599cae1860f0d11.js.unityweb",
+        codeUrl: buildUrl + "/8434b9e35fb207b76c04bbc77ae5aaee.wasm.unityweb",
+        symbolsUrl: buildUrl + "/dd341fe8ffcfb46d8f1519db928bed58.json.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "VeViDi web project",
@@ -92,6 +86,43 @@
               unityInstance.SetFullscreen(1);
             };
           }
+          window.onpopstate = function(event) {
+            var scene_hash = window.location.hash;
+            switch(scene_hash){
+              case "#main_page":
+                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 0);
+                break;
+              case "#testomonials":
+                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 1);
+                break;
+              case "#services":
+                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 2);
+                break;
+              case "#about_us":
+                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 3);
+                break;
+              case "#our_team":
+                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 4);
+                break;
+              case "#our_works":
+                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 5);
+                break;
+              case "#our_project_school":
+                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 6);
+                break;
+              case "#contact_us":
+                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 7);
+                break;
+              case "#our_project_moveit":
+                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 8);
+                break;       
+              case "#our_project_happyco":
+                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 9);
+                break; 
+              default:
+                break;   
+            };
+          };
         }).catch((message) => {
           alert(message);
         });
