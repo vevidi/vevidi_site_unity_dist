@@ -1,143 +1,852 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
+<html lang="en">
+
+<head>
+    <meta name="facebook-domain-verification" content="mix1h2tiog9drhidd2ehcfaefrjuuo"/>
     <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>VeViDi web project</title>
-    <!-- <link rel="shortcut icon" href="TemplateData/favicon.ico"> -->
-    <link rel="stylesheet" href="TemplateData/style.css">
- 
-    <!-- window.location.hash -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>VeViDi — Web & Mobile Development Agency</title>
+<link href="/styles/main.7a2f1e1646dd76498278.css" rel="stylesheet"></head>
 
-  </head>
-  <body class="dark">
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas"></canvas>
-    </div>
-    <div id="loading-cover" style="display:none;">
-      <div id="unity-loading-bar">
-        <div id="unity-logo"><img src="logo.png"></div>
-        <div id="unity-progress-bar-empty" style="display: none;">
-          <div id="unity-progress-bar-full"></div>
+<body id="home" class="dark">
+<div class="alert good-alert alert-success" id="good-alert">
+    <strong>Success!</strong> Thanks for reaching out — we’ll review your message and get back to you soon.
+</div>
+<div class="them-switch">
+    <span> Day Mode –> </span>
+    <label>
+        <input class="dark-check" type="checkbox">
+        <div class="icon-box"><i class="fa fa-sun-o"></i></div>
+    </label>
+</div>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar nav-top fixed-top" id="mainNav">
+
+    <div class="container-fluid">
+        <a href="#home" class="d-flex top-logo">
+            <h1 class="logo">V<span>e</span>V<span>i</span>D<span>i</span></h1>
+        </a>
+        <button class="navbar-toggler navbar-toggler-right top-menu-btn" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ml-auto header-menu text-center">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#about">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        About Us
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#services">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        Services
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#tech">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        Tech Stack
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#testimonials">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        Testimonials
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#team">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        Our Team
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#find-you">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        We're Hiring
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/3d" target="_blank">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        3D - Unity website
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#contact">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        Contact Us
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="spinner"></div>
-      </div>
     </div>
-    <div id="unity-fullscreen-button" style="display: none;"></div>
-    <script>
-      const hideFullScreenButton = "";
-      const buildUrl = "Build";
-      const loaderUrl = buildUrl + "/0599edd3a7d3f4cdbcf373fc977cf2fe.loader.js";
-      const config = {
-        dataUrl: buildUrl + "/27943d38e2d438f7f5d633252f81249f.data.unityweb",
-        frameworkUrl: buildUrl + "/856b47e46f6a3937768d11d50fd66e1e.framework.js.unityweb",
-        codeUrl: buildUrl + "/0f4d72a2b37626413337ff8fdfdff97f.wasm.unityweb",
-        symbolsUrl: buildUrl + "/89cd09dc2e43a5ae6f953860bb0ebd96.symbols.json.unityweb",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "VeViDi web project",
-        productVersion: "10.1",
-      };
-      var scene_hash = window.location.hash;
-      const container = document.querySelector("#unity-container");
-      const canvas = document.querySelector("#unity-canvas");
-      const loadingCover = document.querySelector("#loading-cover");
-      const progressBarEmpty = document.querySelector("#unity-progress-bar-empty");
-      const progressBarFull = document.querySelector("#unity-progress-bar-full");
-      const fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      const spinner = document.querySelector('.spinner');
-     
-      const canFullscreen = (function() {
-        for (const key of [
-            'exitFullscreen',
-            'webkitExitFullscreen',
-            'webkitCancelFullScreen',
-            'mozCancelFullScreen',
-            'msExitFullscreen',
-          ]) {
-          if (key in document) {
-            return true;
-          }
-        }
-        return false;
-      }());
+</nav>
 
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        container.className = "unity-mobile";
-        config.devicePixelRatio = 1;
-      }
-      loadingCover.style.display = "";
+<div id="about" class="section wb">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="message-box">
+                    <h2>Welcome to VeViDi</h2>
+                    <p>
+                        We build stable, high‑value software on time and within your budget. Our team turns your vision
+                        and requirements
+                        into tailored solutions that feel great to use.
+                    </p>
+                    <p>
+                        Our experts are fluent in Ruby on Rails, React, and Vue. We can design, build, and support your
+                        product so it’s
+                        rock‑solid, user‑friendly, and ready to scale.
+                    </p>
+                    <p>
+                        From validating ideas to delivering competitive products, we keep your customers in mind and
+                        solve real business
+                        challenges with modern technology.
+                    </p>
 
-      const script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {   
-           
-        createUnityInstance(canvas, config, (progress) => {
-          spinner.style.display = "none";
-          progressBarEmpty.style.display = "";
-          progressBarFull.style.width = `${100 * progress}%`;
-        }).then((unityInstance) => {
-          const UrlChanger = (function() {
-            if (scene_hash == ""){
-              scene_hash = window.location.hash;
-            }
-            switch(scene_hash){
-              case "#main_page":
-                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 0);
-                break;
-              case "#testomonials":
-                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 1);
-                break;
-              case "#services":
-                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 2);
-                break;
-              case "#about_us":
-                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 3);
-                break;
-              case "#our_team":
-                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 4);
-                break;
-              case "#our_works":
-                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 5);
-                break;
-              case "#our_project_school":
-                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 6);
-                break;
-              case "#contact_us":
-                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 7);
-                break;
-              case "#our_project_moveit":
-                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 8);
-                break;       
-              case "#our_project_happyco":
-                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 9);
-                break; 
-              default:
-                break;   
-            };
-          });
-          UrlChanger();
-          loadingCover.style.display = "none";
-          if (canFullscreen) {
-            if (!hideFullScreenButton) {
-              fullscreenButton.style.display = "";
-            }
-            fullscreenButton.onclick = () => {
-              unityInstance.SetFullscreen(1);
-            };
-          }          
-          window.onpopstate = function(event) {
-            scene_hash = window.location.hash;
-            UrlChanger();
-          }
-        }).catch((message) => {
-          alert(message);
-        });
-      };
-      document.body.appendChild(script);
+                    <p>
+                        As digital transformation moves fast, now’s the perfect time to turn your goals into modern
+                        solutions that
+                        improve customer experience, boost efficiency, and strengthen your competitive edge.
+                    </p>
+
+                    <a href="#contact" class="sim-btn contact-btn">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="services" class="section lb">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>Our services</h3>
+            <p>
+                We support you through the entire product lifecycle—from first idea to launch and continuous
+                improvement.
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="services-inner-box">
+                    <div class="ser-icon">
+                        <i class="flaticon-seo"></i>
+                    </div>
+                    <h2>Web Development</h2>
+                    <p>
+                        If it runs in the browser, we can build it—or make it better. Clean, fast, and maintainable web
+                        apps.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-inner-box">
+                    <div class="ser-icon">
+                        <i class="flaticon-development"></i>
+                    </div>
+                    <h2>Responsive Design</h2>
+                    <p>
+                        Great experiences on every screen size. We craft interfaces that feel right on desktop and
+                        mobile alike.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-inner-box">
+                    <div class="ser-icon">
+                        <i class="i_crm"></i>
+                    </div>
+                    <h2>CRM Development</h2>
+                    <p>
+                        Custom CRM solutions tailored to your workflows—so your team can focus on what matters most.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-inner-box">
+                    <div class="ser-icon">
+                        <i class="i_cloud"></i>
+                    </div>
+                    <h2>Cloud Solutions</h2>
+                    <p>
+                        We work with AWS, Google Cloud, Heroku, and others and deliver containerized setups with Docker
+                        when it fits your needs.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-inner-box">
+                    <div class="ser-icon">
+                        <i class="i_mobile"></i>
+                    </div>
+                    <h2>Mobile Apps</h2>
+                    <p>
+                        Native and cross‑platform iOS and Android apps built for performance, usability, and
+                        reliability.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-inner-box">
+                    <div class="ser-icon">
+                        <i class="i_api"></i>
+                    </div>
+                    <h2>API Integration</h2>
+                    <p>
+                        We integrate third‑party APIs securely and seamlessly to extend your product’s capabilities.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-inner-box">
+                    <div class="ser-icon">
+                        <i class="flaticon-discuss-issue"></i>
+                    </div>
+                    <h2>Support</h2>
+                    <p>
+                        We’re here when you need us—with proactive maintenance and responsive support.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-inner-box">
+                    <div class="ser-icon">
+                        <i class="flaticon-idea"></i>
+                    </div>
+                    <h2>Web Idea</h2>
+                    <p>
+                        Have an idea? Let’s bring it to life together—and make the web a little better along the way.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="tech" class="section wb">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>Tech Stack</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="tech-icon">
+                        <i class="i_ruby"></i>
+                    </div>
+                    <div class="team-content">
+                        <h2>Ruby on Rails</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="tech-icon">
+                        <i class="i_px_react"></i>
+                    </div>
+                    <div class="team-content">
+                        <h2>React</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="tech-icon">
+                        <i class="i_react"></i>
+                    </div>
+                    <div class="team-content">
+                        <h2>React Native</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="tech-icon">
+                        <i class="i_triangle_down"></i>
+                    </div>
+                    <div class="team-content">
+                        <h2>Vue</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="tech-icon">
+                        <i class="i_typescript"></i>
+                    </div>
+                    <div class="team-content">
+                        <h2>TypeScript</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="tech-icon">
+                        <i class="i_python_language"></i>
+                    </div>
+                    <div class="team-content">
+                        <h2>Python</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="tech-icon">
+                        <i class="i_prog_golang"></i>
+                    </div>
+                    <div class="team-content">
+                        <h2>Go</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="tech-icon">
+                        <i class="i_prog_nodejs"></i>
+                    </div>
+                    <div class="team-content">
+                        <h2>Node JS</h2>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="testimonials" class="section lb">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>Testimonials</h3>
+            <p>
+                Here’s what our happy customers say about working with us:
+            </p>
+        </div>
+        <div class="row">
+
+            <div class="col-md-6 col-sm-6 testimonial">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="images/customers/jindou.png" class="img-fluid jindou" alt="Image">
+                    </div>
+                    <div class="col-8">
+                        <span class="quote">&#8220;</span>
+                        <span class="post">
+						  I've worked with Volodymyr years ago and had great results! I hope to be able to find a way to work together again soon.
+						</span>
+                        <span class="quote">&#8220;</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h3 class="title">Jindou Lee</h3>
+                        <span class="post">from <a href="https://happyco.com/"
+                                                   target="blank">HappyCo</a>, Australia, CEO/Founder</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6 testimonial">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="images/customers/gjason-bergenske.jpeg" class="img-fluid" alt="Image">
+                    </div>
+                    <div class="col-8">
+                        <span class="quote">&#8220;</span>
+                        <span class="post">
+              Just wanted to say thank you. We became a success and I know you helped a bunch in the beginning. We have over 2000 moving companies using us now and 40,000 daily users
+            </span>
+                        <span class="quote">&#8220;</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h3 class="title">Jason Bergenske</h3>
+                        <span class="post">from <a href="https://www.moveitpro.com/" target="blank">MoveitPro</a>, USA, CEO/Founder</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-sm-6 testimonial">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="images/customers/artika.jpg" class="img-fluid" alt="Image">
+                    </div>
+                    <div class="col-8">
+                        <span class="quote">&#8220;</span><span class="post">
+            								Thank you for coming in to rescue this project! <br>I truly appreciate it!
+            						    </span>
+                        <span class="quote">&#8220;</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h3 class="title">Artika Sulaiman</h3>
+                        <span class="post">from <a href="https://www.theperfectplan.com/"
+                                                   target="blank">The Perfect Plan Pte Ltd</a>, Singapore, CEO/Founder</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6 testimonial">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="images/customers/omari.jpg" class="img-fluid" alt="Image">
+                    </div>
+                    <div class="col-8">
+                        <span class="quote">&#8220;</span>
+                        <span class="post">
+            								It's been a pleasure working with VeViDi. <br> They've been careful and attentive in helping us achieve our goals.
+            						    </span>
+                        <span class="quote">&#8220;</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h3 class="title">Omari Harebin</h3>
+                        <span class="post">from <a href="https://superjack.app/"
+                                                   target="blank">SuperJack, a Squarespace extension for eCommerce</a>, Washington DC, Founder</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="section-title text-center">
+            <p>
+                Join our growing list of successful customers!
+            </p>
+        </div>
+    </div>
+</div>
+
+<div id="team" class="section wb">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>Our Team</h3>
+            <p>
+                Let’s connect! We love talking with smart, open‑minded people.
+            </p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="images/team/volodymyr.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Volodymyr Petlovy</h3>
+                        <span class="post">CEO/Founder, Senior<br/> Ruby On Rails Team Lead</span>
+                        <ul class="social">
+                            <li>
+                                <a href="https://www.linkedin.com/in/volodymyr-petlovy/" class="fa fa-linkedin"
+                                   target="_blank"></a>
+                            </li>
+                            <!--                            <li>-->
+                            <!--                                <a href="https://telegram.me/vova4kin" class="fa fa-telegram" target="_blank"></a>-->
+                            <!--                            </li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="images/team/alina.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Alina Petlova</h3>
+                        <span class="post">Financial Accountant,<br/> Co-Founder</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="images/team/vitalii.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Vitalii</h3>
+                        <span class="post">Senior Ruby on Rails/Fullstack Developer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="images/team/slavik.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Slavik</h3>
+                        <span class="post">Ruby On Rails Developer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="images/team/anton.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Anton</h3>
+                        <span class="post">Ruby On Rails Developer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="images/team/Roma.png">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Roman</h3>
+                        <span class="post">Senior Frontend/React Developer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="images/team/Andriy.png">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Andrii</h3>
+                        <span class="post">Senior Frontend/React Developer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="images/team/Bohdan.png">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Bohdan</h3>
+                        <span class="post">Senior Unity Developer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="images/team/RomaZ.png">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Roman</h3>
+                        <span class="post">Ruby On Rails Developer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="images/team/vitalii-t.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Vitalii</h3>
+                        <span class="post">Ruby On Rails Developer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="images/team/ihor.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Ihor</h3>
+                        <span class="post">React/ReactNative Developer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="images/teamperson.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">You ??</h3>
+                        <a href="#contact" class="sim-btn contact-btn">
+                            <span class="btn-line btn-line-top"></span>
+                            <span class="btn-line btn-line-right"></span>
+                            <span class="btn-line btn-line-bottom"></span>
+                            <span class="btn-line btn-line-left"></span>
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
-    </script>
-  </body>
+<div id="find-you" class="section find-you">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>We’re Hiring</h3>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Ruby on Rails Developer</h2>
+                <p>
+                    <span>Requirements:</span>full‑time, spoken English, ability to build APIs, open‑minded<br>
+                    <span>Your role:</span>add features, improve performance, fix bugs<br>
+                    <span>Bonus points:</span>ES6, Vue, React, high load, AWS infrastructure<br>
+                    <span>We offer:</span>a friendly team, direct collaboration with the client, flexible
+                    hours, office in the city center, remote work is OK, and competitive compensation for the right
+                    candidate.
+                </p>
+            </div>
+        </div>
+        <a href="#contact" class="sim-btn contact-btn">
+            <span class="btn-line btn-line-top"></span>
+            <span class="btn-line btn-line-right"></span>
+            <span class="btn-line btn-line-bottom"></span>
+            <span class="btn-line btn-line-left"></span>
+            Contact Us
+        </a>
+        <a href="https://telegram.me/vova4kin" target="_blank" class="sim-btn">
+            <span class="btn-line btn-line-top"></span>
+            <span class="btn-line btn-line-right"></span>
+            <span class="btn-line btn-line-bottom"></span>
+            <span class="btn-line btn-line-left"></span>
+            Write To Telegram</a>
+    </div>
+</div>
+
+
+<div id="contact" class="section wb">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>Contact</h3>
+            <p>
+                Use this form to contact us at any time. We are waiting for your message:
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="contact_form">
+                    <form id="contactForm" name="sentMessage" action="./mail/contact_me.php" method="POST">
+                        <input type="hidden" name="result" class="result">
+                        <div class="row">
+                            <div class="col-md-6 col-md-6">
+                                <div class="form-group">
+                                    <input class="form-control" id="name" name="name" type="text"
+                                           placeholder="Your Name" required="required"
+                                           data-validation-required-message="Please enter your name.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" id="email" name="email" type="email"
+                                           placeholder="Your Email" required="required"
+                                           data-validation-required-message="Please enter your email address.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" id="phone" name="phone" type="tel"
+                                           placeholder="Your Phone" required="required"
+                                           data-validation-required-message="Please enter your phone number.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+											<textarea class="form-control" id="message" name="message"
+                                                      placeholder="Your Message" required="required"
+                                                      data-validation-required-message="Please enter a message."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <!-- <div class="col-md-12">
+                              <div class="form-group">
+                                <label>
+                                  <input type="file" id="file" name="file">
+                                </label>
+                              </div>
+                            </div> -->
+                            <div class="clearfix"></div>
+                            <div class="g-recaptcha" id="g-recaptcha"
+                                 data-sitekey="6LdJgLIZAAAAAMszt5ySftc_b4Q3YOiwnee6DSM0"
+                                 data-theme="dark"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button id="sendMessageButton" class="sim-btn">
+                                    <span class="btn-line btn-line-top"></span>
+                                    <span class="btn-line btn-line-right"></span>
+                                    <span class="btn-line btn-line-bottom"></span>
+                                    <span class="btn-line btn-line-left"></span>
+                                    Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <p class="footer-company-name">
+                &copy; <span class="year"></span> Made with love by VeViDi
+            </p>
+        </div>
+    </div>
+
+    <!--    <div class="container">-->
+    <!--        <div class="row justify-content-center">-->
+    <!--            <p class="footer-company-name" style="padding: 10px;">-->
+    <!--                ФОП Петльовий Володимир Миколайович<br/>-->
+    <!--                Україна, 32319, Хмельницька обл., Кам'янець-Подільський р-н, село Жовтневе, вулиця Чкалова, будинок-->
+    <!--                67<br>-->
+    <!--                Дата запису про проведення державної реєстрації: 09.10.2015; Номер запису: 26760000000018965<br>-->
+    <!--                Телефон +38(067)-172-31-38, Адреса електронної пошти: volodymyr.p@vevidi.com-->
+    <!--            </p>-->
+    <!--        </div>-->
+    <!--    </div>-->
+</div>
+
+<nav class="navbar navbar-expand-lg nav-bottom" id="mainNavBottom">
+    <div class="container-fluid">
+
+        <div class="collapse navbar-collapse order-2" id="bottomMenu">
+            <ul class="navbar-nav text-uppercase ml-auto header-menu text-center">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger active" href="#about">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        About Us
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#services">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        Services
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#tech">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        Tech Stack</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#testimonials">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        Testimonials
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#team">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        Our Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#find-you">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        We're Hiring
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="/3d" target="_blank">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        3D - Unity website
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#contact">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <a href="#home" class="d-flex bottom-logo flex-column order-1">
+            <h1 class="logo">V<span>e</span>V<span>i</span>D<span>i</span></h1>
+        </a>
+        <button class="navbar-toggler navbar-toggler-right bottom-menu-btn" type="button" data-toggle="collapse"
+                data-target="#bottomMenu" aria-controls="bottomMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+        </button>
+    </div>
+</nav>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script type="text/javascript" src="/main.249de4f5658c3d86aabb.bundle.js"></script></body>
+
 </html>

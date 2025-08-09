@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>VeViDi web project</title>
+    <!-- <link rel="shortcut icon" href="TemplateData/favicon.ico"> -->
+    <link rel="stylesheet" href="TemplateData/style.css">
+ 
+    <!-- window.location.hash -->
+
+  </head>
+  <body class="dark">
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas"></canvas>
+    </div>
+    <div id="loading-cover" style="display:none;">
+      <div id="unity-loading-bar">
+        <div id="unity-logo"><img src="logo.png"></div>
+        <div id="unity-progress-bar-empty" style="display: none;">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+        <div class="spinner"></div>
+      </div>
+    </div>
+    <div id="unity-fullscreen-button" style="display: none;"></div>
+    <script>
+      const hideFullScreenButton = "";
+      const buildUrl = "Build";
+      const loaderUrl = buildUrl + "/0599edd3a7d3f4cdbcf373fc977cf2fe.loader.js";
+      const config = {
+        dataUrl: buildUrl + "/27943d38e2d438f7f5d633252f81249f.data.unityweb",
+        frameworkUrl: buildUrl + "/856b47e46f6a3937768d11d50fd66e1e.framework.js.unityweb",
+        codeUrl: buildUrl + "/0f4d72a2b37626413337ff8fdfdff97f.wasm.unityweb",
+        symbolsUrl: buildUrl + "/89cd09dc2e43a5ae6f953860bb0ebd96.symbols.json.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "VeViDi web project",
+        productVersion: "10.1",
+      };
+      var scene_hash = window.location.hash;
+      const container = document.querySelector("#unity-container");
+      const canvas = document.querySelector("#unity-canvas");
+      const loadingCover = document.querySelector("#loading-cover");
+      const progressBarEmpty = document.querySelector("#unity-progress-bar-empty");
+      const progressBarFull = document.querySelector("#unity-progress-bar-full");
+      const fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      const spinner = document.querySelector('.spinner');
+     
+      const canFullscreen = (function() {
+        for (const key of [
+            'exitFullscreen',
+            'webkitExitFullscreen',
+            'webkitCancelFullScreen',
+            'mozCancelFullScreen',
+            'msExitFullscreen',
+          ]) {
+          if (key in document) {
+            return true;
+          }
+        }
+        return false;
+      }());
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        container.className = "unity-mobile";
+        config.devicePixelRatio = 1;
+      }
+      loadingCover.style.display = "";
+
+      const script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {   
+           
+        createUnityInstance(canvas, config, (progress) => {
+          spinner.style.display = "none";
+          progressBarEmpty.style.display = "";
+          progressBarFull.style.width = `${100 * progress}%`;
+        }).then((unityInstance) => {
+          const UrlChanger = (function() {
+            if (scene_hash == ""){
+              scene_hash = window.location.hash;
+            }
+            switch(scene_hash){
+              case "#main_page":
+                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 0);
+                break;
+              case "#testomonials":
+                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 1);
+                break;
+              case "#services":
+                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 2);
+                break;
+              case "#about_us":
+                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 3);
+                break;
+              case "#our_team":
+                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 4);
+                break;
+              case "#our_works":
+                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 5);
+                break;
+              case "#our_project_school":
+                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 6);
+                break;
+              case "#contact_us":
+                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 7);
+                break;
+              case "#our_project_moveit":
+                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 8);
+                break;       
+              case "#our_project_happyco":
+                unityInstance.SendMessage('SceneController', 'LoadSceneMethod', 9);
+                break; 
+              default:
+                break;   
+            };
+          });
+          UrlChanger();
+          loadingCover.style.display = "none";
+          if (canFullscreen) {
+            if (!hideFullScreenButton) {
+              fullscreenButton.style.display = "";
+            }
+            fullscreenButton.onclick = () => {
+              unityInstance.SetFullscreen(1);
+            };
+          }          
+          window.onpopstate = function(event) {
+            scene_hash = window.location.hash;
+            UrlChanger();
+          }
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+
+
+    </script>
+  </body>
+</html>
