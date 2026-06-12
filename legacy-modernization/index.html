@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="facebook-domain-verification" content="mix1h2tiog9drhidd2ehcfaefrjuuo"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Legacy Rails Modernization - Refactor in Place | VeViDi</title>
+    <meta name="description" content="Strangler-fig modernization for Rails monoliths. Senior judgment plus AI tooling, one named engineer, no rewrite roulette. We keep you shipping."/>
+    <meta property="og:title" content="Legacy Rails Modernization - Keep Shipping, No Rewrite Roulette"/>
+    <meta property="og:description" content="We modernize Rails monoliths in place with the strangler-fig pattern. Senior engineers, AI-amplified delivery, one human per relationship."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://vevidi.com/legacy-modernization/"/>
+    <meta property="og:site_name" content="VeViDi"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:image" content="https://vevidi.com/logo.png"/>
+    <meta property="og:image:alt" content="VeViDi - senior engineering partner for SaaS founders; AI-amplified delivery"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Legacy Rails Modernization - Keep Shipping, No Rewrite Roulette"/>
+    <meta name="twitter:description" content="We modernize Rails monoliths in place with the strangler-fig pattern. Senior engineers, AI-amplified delivery."/>
+    <meta name="twitter:image" content="https://vevidi.com/logo.png"/>
+    <meta name="theme-color" content="#0e0e10"/>
+    <link rel="canonical" href="https://vevidi.com/legacy-modernization/"/>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Legacy Ruby on Rails Application Modernization",
+            "name": "Legacy Rails Modernization",
+            "provider": {
+                "@type": "Organization",
+                "name": "VeViDi",
+                "url": "https://vevidi.com/"
+            },
+            "areaServed": "Worldwide",
+            "description": "Strangler-fig modernization for legacy Ruby on Rails monoliths. We refactor in place, backfill test coverage, modernize frontends, and keep the product shipping - no big-bang rewrite. AI-amplified delivery, one named senior engineer per relationship.",
+            "url": "https://vevidi.com/legacy-modernization/"
+        }
+    </script>
+<link href="/styles/main.a9610dc44ef8abb7bb1f.css" rel="stylesheet"></head>
+
+<body id="home" class="dark" style="background-color: #1f1f1f;">
+<div class="them-switch">
+    <span> Day Mode -> </span>
+    <label>
+        <input class="dark-check" type="checkbox">
+        <div class="icon-box"><i class="fa fa-sun-o"></i></div>
+    </label>
+</div>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar nav-top fixed-top" id="mainNav">
+    <div class="container-fluid">
+        <a href="/" class="logo-link d-flex top-logo" aria-label="VeViDi - engineering partner for SaaS founders, home">
+            <span class="logo" role="img" aria-label="VeViDi">V<span>e</span>V<span>i</span>D<span>i</span></span>
+            <span class="logo-description">Veni Vidi Dixi * I came, I saw, I delivered.</span>
+        </a>
+        <button class="navbar-toggler navbar-toggler-right top-menu-btn" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse double-header">
+            <div id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto header-menu text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#about">
+                            <span class="btn-line btn-line-top"></span>
+                            <span class="btn-line btn-line-right"></span>
+                            <span class="btn-line btn-line-bottom"></span>
+                            <span class="btn-line btn-line-left"></span>
+                            About Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#services">
+                            <span class="btn-line btn-line-top"></span>
+                            <span class="btn-line btn-line-right"></span>
+                            <span class="btn-line btn-line-bottom"></span>
+                            <span class="btn-line btn-line-left"></span>
+                            Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#tech">
+                            <span class="btn-line btn-line-top"></span>
+                            <span class="btn-line btn-line-right"></span>
+                            <span class="btn-line btn-line-bottom"></span>
+                            <span class="btn-line btn-line-left"></span>
+                            Tech Stack
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#testimonials">
+                            <span class="btn-line btn-line-top"></span>
+                            <span class="btn-line btn-line-right"></span>
+                            <span class="btn-line btn-line-bottom"></span>
+                            <span class="btn-line btn-line-left"></span>
+                            Testimonials
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#team">
+                            <span class="btn-line btn-line-top"></span>
+                            <span class="btn-line btn-line-right"></span>
+                            <span class="btn-line btn-line-bottom"></span>
+                            <span class="btn-line btn-line-left"></span>
+                            Our Team
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#find-you">
+                            <span class="btn-line btn-line-top"></span>
+                            <span class="btn-line btn-line-right"></span>
+                            <span class="btn-line btn-line-bottom"></span>
+                            <span class="btn-line btn-line-left"></span>
+                            We're Hiring
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#contact">
+                            <span class="btn-line btn-line-top"></span>
+                            <span class="btn-line btn-line-right"></span>
+                            <span class="btn-line btn-line-bottom"></span>
+                            <span class="btn-line btn-line-left"></span>
+                            Contact Us
+                        </a>
+                    </li>
+                    <li class="nav-item nav-item-mobile">
+                        <a class="nav-link" href="/rails-rescue/">
+                            <span class="btn-line btn-line-top"></span>
+                            <span class="btn-line btn-line-right"></span>
+                            <span class="btn-line btn-line-bottom"></span>
+                            <span class="btn-line btn-line-left"></span>
+                            Rails Rescue
+                        </a>
+                    </li>
+                    <li class="nav-item nav-item-mobile">
+                        <a class="nav-link" href="/rails-upgrade/">
+                            <span class="btn-line btn-line-top"></span>
+                            <span class="btn-line btn-line-right"></span>
+                            <span class="btn-line btn-line-bottom"></span>
+                            <span class="btn-line btn-line-left"></span>
+                            Rails Upgrade
+                        </a>
+                    </li>
+                    <li class="nav-item nav-item-mobile">
+                        <a class="nav-link active" href="/legacy-modernization/">
+                            <span class="btn-line btn-line-top"></span>
+                            <span class="btn-line btn-line-right"></span>
+                            <span class="btn-line btn-line-bottom"></span>
+                            <span class="btn-line btn-line-left"></span>
+                            Legacy Modernization
+                        </a>
+                    </li>
+                    <li class="nav-item nav-item-mobile">
+                        <a class="nav-link" href="/3d/" target="_blank">
+                            <span class="btn-line btn-line-top"></span>
+                            <span class="btn-line btn-line-right"></span>
+                            <span class="btn-line btn-line-bottom"></span>
+                            <span class="btn-line btn-line-left"></span>
+                            3D - Unity website
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="subheader">
+                <ul class="navbar-nav text-uppercase ml-auto header-menu text-center">
+                    <li class="nav-item-second">
+                        <a class="nav-link" href="/rails-rescue/">
+                            <span class="btn-line btn-line-bottom"></span>
+                            Rails Rescue
+                        </a>
+                    </li>
+                    <li class="nav-item-second">
+                        <a class="nav-link" href="/rails-upgrade/">
+                            <span class="btn-line btn-line-bottom"></span>
+                            Rails Upgrade
+                        </a>
+                    </li>
+                    <li class="nav-item-second">
+                        <a class="nav-link active" href="/legacy-modernization/">
+                            <span class="btn-line btn-line-bottom"></span>
+                            Legacy Modernization
+                        </a>
+                    </li>
+                    <li class="nav-item-second">
+                        <a class="nav-link" href="/3d/" target="_blank">
+                            <span class="btn-line btn-line-bottom"></span>
+                            3D - Unity website
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="section wb">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="message-box">
+                    <h1>Modernize the monolith without betting the company on a rewrite.</h1>
+                    <p>
+                        Your application makes money, but it costs you every month it stays the way it is. Features that used to take days now take weeks. You cannot find engineers who will touch the old Rails version, the jQuery frontend, or the inherited PHP service bolted to the side. Security patches pile up. And the one option everyone keeps proposing, a full rewrite from scratch, is the most expensive and riskiest move there is. Most legacy apps do not need a rewrite. They need a senior team that knows how to modernize in place while the business keeps running.
+                    </p>
+                    <a href="/#contact" class="sim-btn contact-btn">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        Let's Talk
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section lb">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>Why rewrites are the wrong default</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="message-box">
+                    <p>
+                        A from-scratch rewrite asks you to freeze the product, rebuild everything you already have, and bet that the new version reaches parity before the money or the patience runs out. That bet loses often. The honest alternative is the strangler-fig pattern: you grow the new system around the old one, route by route, piece by piece, retiring the legacy parts only once their replacements are live and proven. The app never stops shipping, and you are never one big-bang launch away from disaster. We will tell you the rare cases where a clean rewrite genuinely is the right call, and the far more common cases where it is not.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section wb">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>What we do</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="message-box">
+                    <p>
+                        We start with a codebase audit, usually one to two weeks. We read the code at scale with AI tooling and give you an honest assessment: what is salvageable, what needs replacing, and what the modernization roadmap actually costs. Because there is rarely enough test coverage to refactor safely, we backfill it first with AI-assisted test generation for the existing behavior, so the work has a safety net.
+                    </p>
+                    <p>
+                        Then we modernize incrementally. Old and new run side by side. We refresh tired frontends (jQuery, Angular 1, Backbone) into modern React or Vue, upgrade the framework as part of the path rather than as a separate freeze, and fold performance and security cleanup into the work instead of billing it as another project. One named senior engineer owns the architecture across the whole engagement, so the judgment calls are consistent and nobody is learning your system on your budget.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section lb">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>What makes this different in 2026</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="message-box">
+                    <p>
+                        Most shops still treat AI as something you bolt onto a project. We treat it as how serious modernization gets done now. Reading a large unfamiliar codebase at scale, generating the missing tests, and refactoring confidently are exactly the tasks where senior judgment plus AI amplification compresses what used to be six-month efforts into weeks. The judgment is the part that does not come from the tool: knowing which library to drop, which AWS service is wrong for your scale, and which 2014 decision will haunt you in eighteen months. That is the 17+ years talking, amplified, not replaced, by AI.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section wb">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>Proof, not adjectives</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="message-box">
+                    <p>
+                        We have modernized and maintained real Rails systems, not just pitched the idea. Volodymyr authored early versions of <a href="https://www.moveitpro.com/" target="_blank" rel="noopener">MoveitPro</a> (2,000+ moving companies, 40,000 daily users today) and <a href="https://happyco.com/" target="_blank" rel="noopener">HappyCo</a> (now a substantial US PropTech company), and VeViDi engineered Cliqpod's content portfolio to 20M+ users and 200M+ pageviews a month. We are the ongoing engineering team behind LionWheel (1,000+ businesses worldwide, 4.8/5 on G2 and Capterra). And we took an inherited, buggy live fintech product (under NDA) and stabilized its Rails backend to zero error alerts for months. Receipts, not adjectives.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section lb">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>The economics</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="message-box">
+                    <p>
+                        Modernization used to mean throwing a full team at a codebase for months at full-team rates. AI-amplified delivery changes both the timeline and the cost, because reading the code and building the test safety net happen far faster. The hiring math has shifted too: an in-house developer now costs salary plus a monthly AI tooling bill, while one senior engineer with AI amplification through us can land under the cost of that local hire alone. We keep the figures honest and scope them to your actual codebase and market before you commit. Worth running the in-house-versus-partner comparison past your accountant as well, since payments to an external partner are often a deductible expense where a salary carries extra employer-side costs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section wb">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>Who this is not for</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="message-box">
+                    <p>
+                        If your codebase is small and healthy and you just want a feature added, you do not need a modernization engagement, and we will point you to the simpler path. If you want a body to fill a seat with no defined outcome, we are not the shop. We take modernization work where senior judgment changes the result and protects a product that real customers rely on.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section lb">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>Get an honest read</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="message-box">
+                    <p>
+                        Tell us what the app is, what it runs on, and where it hurts. You will talk to the senior engineer who would own the architecture, not a salesperson, and get an honest roadmap including whether modernization is even the right move. Email <a href="mailto:volodymyr.p@vevidi.com">volodymyr.p@vevidi.com</a> or use the <a href="/#contact">contact form on the homepage</a>.
+                    </p>
+                    <a href="/#contact" class="sim-btn contact-btn">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="section-title text-center">
+            <p>
+                Lost the team that built it? See <a href="/rails-rescue/">Rails app rescue</a>. Just need a version jump? See <a href="/rails-upgrade/">Rails upgrade</a>. More about the team and named work: <a href="/">vevidi.com homepage</a>.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="section wb">
+    <div class="container">
+        <div class="row justify-content-center">
+            <p class="footer-company-name">
+                &copy; <span class="year"></span> Made with love by VeViDi
+            </p>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg nav-bottom" id="mainNavBottom">
+    <div class="container-fluid">
+        <a href="/" class="d-flex bottom-logo" aria-label="VeViDi - home">
+            <span class="logo" role="img" aria-label="VeViDi">V<span>e</span>V<span>i</span>D<span>i</span></span>
+        </a>
+        <button class="navbar-toggler navbar-toggler-right bottom-menu-btn" type="button" data-toggle="collapse"
+                data-target="#bottomMenu" aria-controls="bottomMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="bottomMenu">
+            <ul class="navbar-nav text-uppercase ml-auto header-menu text-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="/#about">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        About Us
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/#services">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        Services
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/#tech">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        Tech Stack</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/#testimonials">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        Testimonials
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/#team">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        Our Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/#find-you">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        We're Hiring
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/#contact">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/rails-rescue/">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        Rails Rescue
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/rails-upgrade/">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        Rails Upgrade
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/legacy-modernization/">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        Legacy Modernization
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/3d/" target="_blank">
+                        <span class="btn-line btn-line-top"></span>
+                        <span class="btn-line btn-line-right"></span>
+                        <span class="btn-line btn-line-bottom"></span>
+                        <span class="btn-line btn-line-left"></span>
+                        3D - Unity website
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<script type="text/javascript" src="/main.0fe36455cce68a49c14d.bundle.js"></script></body>
+
+</html>
