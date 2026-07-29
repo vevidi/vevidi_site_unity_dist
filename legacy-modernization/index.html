@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Legacy Rails Modernization - Refactor in Place | VeViDi</title>
-    <meta name="description" content="Strangler-fig modernization for Rails monoliths. Senior judgment plus AI tooling, one named engineer, no rewrite roulette. We keep you shipping."/>
+    <title>Legacy Rails Modernization, US and EU Teams | VeViDi</title>
+    <meta name="description" content="Modernize a Rails monolith in place, no rewrite roulette. Senior engineers for US and EU product teams, one named owner, and you keep shipping throughout."/>
     <meta property="og:title" content="Legacy Rails Modernization - Keep Shipping, No Rewrite Roulette"/>
     <meta property="og:description" content="We modernize Rails monoliths in place with the strangler-fig pattern. Senior engineers, AI-amplified delivery, one human per relationship."/>
     <meta property="og:type" content="website"/>
@@ -22,21 +22,86 @@
     <meta name="twitter:image" content="https://vevidi.com/logo.png"/>
     <meta name="theme-color" content="#0e0e10"/>
     <link rel="canonical" href="https://vevidi.com/legacy-modernization/"/>
+    <link rel="alternate" hreflang="en" href="https://vevidi.com/legacy-modernization/"/>
+    <link rel="alternate" hreflang="de" href="https://vevidi.com/de/legacy-modernisierung/"/>
+    <link rel="alternate" hreflang="x-default" href="https://vevidi.com/legacy-modernization/"/>
     <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": "Legacy Ruby on Rails Application Modernization",
-            "name": "Legacy Rails Modernization",
-            "provider": {
-                "@type": "Organization",
-                "name": "VeViDi",
-                "url": "https://vevidi.com/"
-            },
-            "areaServed": "Worldwide",
-            "description": "Strangler-fig modernization for legacy Ruby on Rails monoliths. We refactor in place, backfill test coverage, modernize frontends, and keep the product shipping - no big-bang rewrite. AI-amplified delivery, one named senior engineer per relationship.",
-            "url": "https://vevidi.com/legacy-modernization/"
+            "@graph": [
+                {
+                    "@type": "Service",
+                    "serviceType": "Legacy Ruby on Rails Application Modernization",
+                    "name": "Legacy Rails Modernization",
+                    "alternateName": "Rails legacy modernization service",
+                    "provider": {
+                        "@type": "Organization",
+                        "name": "VeViDi",
+                        "url": "https://vevidi.com/"
+                    },
+                    "areaServed": "Worldwide",
+                    "availableLanguage": [
+                        "en",
+                        "de"
+                    ],
+                    "description": "Strangler-fig modernization for legacy Ruby on Rails monoliths. We refactor in place, backfill test coverage, modernize frontends, and keep the product shipping, with no big-bang rewrite. AI-amplified delivery, one named senior engineer per relationship.",
+                    "url": "https://vevidi.com/legacy-modernization/"
+                },
+                {
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "What is legacy Rails modernization?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "It is modernizing a Ruby on Rails application that still makes money, in place, while it keeps running. The old code is replaced piece by piece behind stable interfaces rather than rebuilt from scratch, so the business never waits for a big-bang cutover. Version upgrades, frontend replacement and architecture work all sit inside it."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Why not just rewrite it?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Because a rewrite asks you to pay for two systems while earning from one, and to reproduce years of undocumented behaviour from memory. It is the most expensive and riskiest option available, and it is proposed far more often than it is warranted. We modernize in place by default and say plainly when a rewrite genuinely is cheaper."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Can you modernize while we keep shipping features?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes, and that is the point of working in increments. Each piece of modernization is scoped so the application stays deployable throughout, and roadmap work continues alongside rather than behind it."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "What if part of the system is not Rails?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "That is normal in a legacy estate. Old frontends, services in other languages and things bolted on years ago are part of the picture we map at the start. The plan covers what is actually there rather than the Rails part in isolation."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Where do you start?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "With a short audit that produces a written picture of the architecture, the dependency and version risk, the test coverage, and a technical debt inventory ranked by business risk rather than by engineering taste. You get an order of work and what each step costs before committing to any of it."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Who does the work?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "One named senior engineer owns the relationship and stays on it. For Rails that is usually our founder, Volodymyr Petlovy, who has 17+ years of Rails depth."
+                            }
+                        }
+                    ]
+                }
+            ]
         }
     </script>
     <link href="/styles/main.edfad994eba394f0ecd9.css" rel="stylesheet">
@@ -234,6 +299,23 @@
 <div class="section lb">
     <div class="container">
         <div class="section-title text-center">
+            <h3>What legacy Rails modernization is</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="message-box">
+                    <p>
+                        Legacy Rails modernization means bringing an application that still earns its keep up to a maintainable, supported, hireable state without stopping it. The work happens in place and in increments: risky dependencies and versions first, then the parts of the architecture that make every change slow, with the product deployable the whole way. A rewrite replaces the system. Modernization replaces its parts, one at a time, while it runs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section wb">
+    <div class="container">
+        <div class="section-title text-center">
             <h3>Why rewrites are the wrong default</h3>
         </div>
         <div class="row">
@@ -248,7 +330,7 @@
     </div>
 </div>
 
-<div class="section wb">
+<div class="section lb">
     <div class="container">
         <div class="section-title text-center">
             <h3>What we do</h3>
@@ -268,7 +350,7 @@
     </div>
 </div>
 
-<div class="section lb">
+<div class="section wb">
     <div class="container">
         <div class="section-title text-center">
             <h3>What makes this different in 2026</h3>
@@ -285,7 +367,7 @@
     </div>
 </div>
 
-<div class="section wb">
+<div class="section lb">
     <div class="container">
         <div class="section-title text-center">
             <h3>Proof, not adjectives</h3>
@@ -302,7 +384,7 @@
     </div>
 </div>
 
-<div class="section lb">
+<div class="section wb">
     <div class="container">
         <div class="section-title text-center">
             <h3>The economics</h3>
@@ -319,7 +401,7 @@
     </div>
 </div>
 
-<div class="section wb">
+<div class="section lb">
     <div class="container">
         <div class="section-title text-center">
             <h3>Who this is not for</h3>
@@ -329,6 +411,38 @@
                 <div class="message-box">
                     <p>
                         If your codebase is small and healthy and you just want a feature added, you do not need a modernization engagement, and we will point you to the simpler path. If you want a body to fill a seat with no defined outcome, we are not the shop. We take modernization work where senior judgment changes the result and protects a product that real customers rely on.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section wb">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>Questions founders ask before modernizing</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="message-box">
+                    <p>
+                        <strong>What is legacy Rails modernization?</strong> It is modernizing a Ruby on Rails application that still makes money, in place, while it keeps running. The old code is replaced piece by piece behind stable interfaces rather than rebuilt from scratch, so the business never waits for a big-bang cutover. Version upgrades, frontend replacement and architecture work all sit inside it.
+                    </p>
+                    <p>
+                        <strong>Why not just rewrite it?</strong> Because a rewrite asks you to pay for two systems while earning from one, and to reproduce years of undocumented behaviour from memory. It is the most expensive and riskiest option available, and it is proposed far more often than it is warranted. We modernize in place by default and say plainly when a rewrite genuinely is cheaper.
+                    </p>
+                    <p>
+                        <strong>Can you modernize while we keep shipping features?</strong> Yes, and that is the point of working in increments. Each piece of modernization is scoped so the application stays deployable throughout, and roadmap work continues alongside rather than behind it.
+                    </p>
+                    <p>
+                        <strong>What if part of the system is not Rails?</strong> That is normal in a legacy estate. Old frontends, services in other languages and things bolted on years ago are part of the picture we map at the start. The plan covers what is actually there rather than the Rails part in isolation.
+                    </p>
+                    <p>
+                        <strong>Where do you start?</strong> With a short audit that produces a written picture of the architecture, the dependency and version risk, the test coverage, and a technical debt inventory ranked by business risk rather than by engineering taste. You get an order of work and what each step costs before committing to any of it.
+                    </p>
+                    <p>
+                        <strong>Who does the work?</strong> One named senior engineer owns the relationship and stays on it. For Rails that is usually our founder, Volodymyr Petlovy, who has 17+ years of Rails depth.
                     </p>
                 </div>
             </div>
@@ -360,6 +474,11 @@
         <div class="section-title text-center section-outro">
             <p>
                 Lost the team that built it? See <a href="/rails-rescue/">Rails app rescue</a>. Just need a version jump? See <a href="/rails-upgrade/">Rails upgrade</a>. More about the team and named work: <a href="/">vevidi.com homepage</a>.
+            </p>
+        </div>
+        <div class="section-title text-center section-outro">
+            <p>
+                Auf Deutsch: <a href="/de/legacy-modernisierung/">Legacy-Modernisierung für Ruby-on-Rails-Anwendungen</a>.
             </p>
         </div>
     </div>

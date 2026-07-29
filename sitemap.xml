@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://vevidi.com/blog/anatomy-of-a-fake-rfp/</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -14,55 +14,67 @@
   </url>
   <url>
     <loc>https://vevidi.com/careers/</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://vevidi.com/contact/</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vevidi.com/de/legacy-modernisierung/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vevidi.com/de/legacy-modernisierung/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vevidi.com/legacy-modernization/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vevidi.com/legacy-modernization/"/>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://vevidi.com/</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://vevidi.com/legacy-modernization/</loc>
-    <lastmod>2026-07-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vevidi.com/legacy-modernization/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vevidi.com/de/legacy-modernisierung/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vevidi.com/legacy-modernization/"/>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://vevidi.com/rails-rescue/</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://vevidi.com/rails-upgrade/</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://vevidi.com/team/</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://vevidi.com/tech/</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://vevidi.com/testimonials/</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
